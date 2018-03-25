@@ -7,15 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		25A4B3A73F923CE4B85A8319 /* libPods-MusicHub.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C51BA28A48A29DF94B795AEF /* libPods-MusicHub.a */; };
 		E7D7566B2067ED2C00AF7694 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D7566A2067ED2C00AF7694 /* AppDelegate.m */; };
 		E7D7566E2067ED2C00AF7694 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D7566D2067ED2C00AF7694 /* ViewController.m */; };
 		E7D756712067ED2C00AF7694 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7D7566F2067ED2C00AF7694 /* Main.storyboard */; };
 		E7D756732067ED2C00AF7694 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7D756722067ED2C00AF7694 /* Assets.xcassets */; };
 		E7D756762067ED2C00AF7694 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7D756742067ED2C00AF7694 /* LaunchScreen.storyboard */; };
 		E7D756792067ED2C00AF7694 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D756782067ED2C00AF7694 /* main.m */; };
+		E7D756812067EE0D00AF7694 /* NetworkController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D756802067EE0D00AF7694 /* NetworkController.m */; };
+		E7D756852067EE9C00AF7694 /* SpeechToTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D756842067EE9C00AF7694 /* SpeechToTextViewController.m */; };
+		E7D7568B2067EEFC00AF7694 /* LibraryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D7568A2067EEFC00AF7694 /* LibraryViewController.m */; };
+		E7D7568E2067EF1000AF7694 /* RecentlyListenedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D7568D2067EF1000AF7694 /* RecentlyListenedViewController.m */; };
+		E7D756912067EF3200AF7694 /* YouTubeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D756902067EF3200AF7694 /* YouTubeViewController.m */; };
+		E7D756942067EF7300AF7694 /* Speech.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7D756932067EF7300AF7694 /* Speech.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		623319649A3533554172868F /* Pods-MusicHub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicHub.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MusicHub/Pods-MusicHub.debug.xcconfig"; sourceTree = "<group>"; };
+		9C783E2ABD1E4F70794A5506 /* Pods-MusicHub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicHub.release.xcconfig"; path = "Pods/Target Support Files/Pods-MusicHub/Pods-MusicHub.release.xcconfig"; sourceTree = "<group>"; };
+		C51BA28A48A29DF94B795AEF /* libPods-MusicHub.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MusicHub.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7D756662067ED2C00AF7694 /* MusicHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7D756692067ED2C00AF7694 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E7D7566A2067ED2C00AF7694 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -26,6 +36,17 @@
 		E7D756752067ED2C00AF7694 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E7D756772067ED2C00AF7694 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7D756782067ED2C00AF7694 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E7D7567F2067EE0D00AF7694 /* NetworkController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkController.h; sourceTree = "<group>"; };
+		E7D756802067EE0D00AF7694 /* NetworkController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkController.m; sourceTree = "<group>"; };
+		E7D756832067EE9C00AF7694 /* SpeechToTextViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpeechToTextViewController.h; sourceTree = "<group>"; };
+		E7D756842067EE9C00AF7694 /* SpeechToTextViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpeechToTextViewController.m; sourceTree = "<group>"; };
+		E7D756892067EEFC00AF7694 /* LibraryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LibraryViewController.h; sourceTree = "<group>"; };
+		E7D7568A2067EEFC00AF7694 /* LibraryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LibraryViewController.m; sourceTree = "<group>"; };
+		E7D7568C2067EF1000AF7694 /* RecentlyListenedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecentlyListenedViewController.h; sourceTree = "<group>"; };
+		E7D7568D2067EF1000AF7694 /* RecentlyListenedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecentlyListenedViewController.m; sourceTree = "<group>"; };
+		E7D7568F2067EF3200AF7694 /* YouTubeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YouTubeViewController.h; sourceTree = "<group>"; };
+		E7D756902067EF3200AF7694 /* YouTubeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YouTubeViewController.m; sourceTree = "<group>"; };
+		E7D756932067EF7300AF7694 /* Speech.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Speech.framework; path = System/Library/Frameworks/Speech.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +54,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7D756942067EF7300AF7694 /* Speech.framework in Frameworks */,
+				25A4B3A73F923CE4B85A8319 /* libPods-MusicHub.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08749252268E8F48008FB42D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				623319649A3533554172868F /* Pods-MusicHub.debug.xcconfig */,
+				9C783E2ABD1E4F70794A5506 /* Pods-MusicHub.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E7D7565D2067ED2C00AF7694 = {
 			isa = PBXGroup;
 			children = (
 				E7D756682067ED2C00AF7694 /* MusicHub */,
 				E7D756672067ED2C00AF7694 /* Products */,
+				E7D756922067EF7200AF7694 /* Frameworks */,
+				08749252268E8F48008FB42D /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +94,9 @@
 			children = (
 				E7D756692067ED2C00AF7694 /* AppDelegate.h */,
 				E7D7566A2067ED2C00AF7694 /* AppDelegate.m */,
+				E7D7567F2067EE0D00AF7694 /* NetworkController.h */,
+				E7D756802067EE0D00AF7694 /* NetworkController.m */,
+				E7D756822067EE7D00AF7694 /* Main UI classes */,
 				E7D7566C2067ED2C00AF7694 /* ViewController.h */,
 				E7D7566D2067ED2C00AF7694 /* ViewController.m */,
 				E7D7566F2067ED2C00AF7694 /* Main.storyboard */,
@@ -71,6 +108,30 @@
 			path = MusicHub;
 			sourceTree = "<group>";
 		};
+		E7D756822067EE7D00AF7694 /* Main UI classes */ = {
+			isa = PBXGroup;
+			children = (
+				E7D7568F2067EF3200AF7694 /* YouTubeViewController.h */,
+				E7D756902067EF3200AF7694 /* YouTubeViewController.m */,
+				E7D756832067EE9C00AF7694 /* SpeechToTextViewController.h */,
+				E7D756842067EE9C00AF7694 /* SpeechToTextViewController.m */,
+				E7D756892067EEFC00AF7694 /* LibraryViewController.h */,
+				E7D7568A2067EEFC00AF7694 /* LibraryViewController.m */,
+				E7D7568C2067EF1000AF7694 /* RecentlyListenedViewController.h */,
+				E7D7568D2067EF1000AF7694 /* RecentlyListenedViewController.m */,
+			);
+			path = "Main UI classes";
+			sourceTree = "<group>";
+		};
+		E7D756922067EF7200AF7694 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E7D756932067EF7300AF7694 /* Speech.framework */,
+				C51BA28A48A29DF94B795AEF /* libPods-MusicHub.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -78,9 +139,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E7D7567C2067ED2C00AF7694 /* Build configuration list for PBXNativeTarget "MusicHub" */;
 			buildPhases = (
+				8AD5803E48CE0B06E95C50A5 /* [CP] Check Pods Manifest.lock */,
 				E7D756622067ED2C00AF7694 /* Sources */,
 				E7D756632067ED2C00AF7694 /* Frameworks */,
 				E7D756642067ED2C00AF7694 /* Resources */,
+				81636B0FB8FF56A169CB6903 /* [CP] Embed Pods Frameworks */,
+				5F04D6A75254E508C1DDC8DA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -137,13 +201,72 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5F04D6A75254E508C1DDC8DA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MusicHub/Pods-MusicHub-resources.sh",
+				"${PODS_ROOT}/youtube-ios-player-helper/youtube-ios-player-helper/Assets.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Assets.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MusicHub/Pods-MusicHub-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		81636B0FB8FF56A169CB6903 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MusicHub/Pods-MusicHub-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8AD5803E48CE0B06E95C50A5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MusicHub-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E7D756622067ED2C00AF7694 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7D7568B2067EEFC00AF7694 /* LibraryViewController.m in Sources */,
+				E7D756812067EE0D00AF7694 /* NetworkController.m in Sources */,
 				E7D7566E2067ED2C00AF7694 /* ViewController.m in Sources */,
+				E7D7568E2067EF1000AF7694 /* RecentlyListenedViewController.m in Sources */,
+				E7D756852067EE9C00AF7694 /* SpeechToTextViewController.m in Sources */,
 				E7D756792067ED2C00AF7694 /* main.m in Sources */,
+				E7D756912067EF3200AF7694 /* YouTubeViewController.m in Sources */,
 				E7D7566B2067ED2C00AF7694 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,9 +399,11 @@
 		};
 		E7D7567D2067ED2C00AF7694 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 623319649A3533554172868F /* Pods-MusicHub.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NZVKC8796C;
 				INFOPLIST_FILE = MusicHub/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = RZ.MusicHub;
@@ -289,9 +414,11 @@
 		};
 		E7D7567E2067ED2C00AF7694 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C783E2ABD1E4F70794A5506 /* Pods-MusicHub.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NZVKC8796C;
 				INFOPLIST_FILE = MusicHub/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = RZ.MusicHub;
