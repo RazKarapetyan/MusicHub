@@ -8,10 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		25A4B3A73F923CE4B85A8319 /* libPods-MusicHub.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C51BA28A48A29DF94B795AEF /* libPods-MusicHub.a */; };
+		E76DA0992067F8500077313D /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = E76DA0982067F8500077313D /* data.json */; };
+		E76DA0A120680BAF0077313D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E76DA09F20680BAF0077313D /* Main.storyboard */; };
+		E76DA0A920680FAC0077313D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E76DA0A820680FAC0077313D /* Assets.xcassets */; };
+		E76DA0B02068107F0077313D /* icon-04_25x25.png in Resources */ = {isa = PBXBuildFile; fileRef = E76DA0AA2068107F0077313D /* icon-04_25x25.png */; };
+		E76DA0B12068107F0077313D /* icon-02_25x25.png in Resources */ = {isa = PBXBuildFile; fileRef = E76DA0AB2068107F0077313D /* icon-02_25x25.png */; };
+		E76DA0B22068107F0077313D /* icon-01_25x25.png in Resources */ = {isa = PBXBuildFile; fileRef = E76DA0AC2068107F0077313D /* icon-01_25x25.png */; };
+		E76DA0B32068107F0077313D /* icon-03_25x25.png in Resources */ = {isa = PBXBuildFile; fileRef = E76DA0AD2068107F0077313D /* icon-03_25x25.png */; };
+		E76DA0B42068107F0077313D /* icon-05_25x25.png in Resources */ = {isa = PBXBuildFile; fileRef = E76DA0AE2068107F0077313D /* icon-05_25x25.png */; };
+		E76DA0B52068107F0077313D /* icon-06_25x25.png in Resources */ = {isa = PBXBuildFile; fileRef = E76DA0AF2068107F0077313D /* icon-06_25x25.png */; };
 		E7D7566B2067ED2C00AF7694 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D7566A2067ED2C00AF7694 /* AppDelegate.m */; };
-		E7D7566E2067ED2C00AF7694 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D7566D2067ED2C00AF7694 /* ViewController.m */; };
-		E7D756712067ED2C00AF7694 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7D7566F2067ED2C00AF7694 /* Main.storyboard */; };
-		E7D756732067ED2C00AF7694 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7D756722067ED2C00AF7694 /* Assets.xcassets */; };
 		E7D756762067ED2C00AF7694 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7D756742067ED2C00AF7694 /* LaunchScreen.storyboard */; };
 		E7D756792067ED2C00AF7694 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D756782067ED2C00AF7694 /* main.m */; };
 		E7D756812067EE0D00AF7694 /* NetworkController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D756802067EE0D00AF7694 /* NetworkController.m */; };
@@ -26,13 +32,18 @@
 		623319649A3533554172868F /* Pods-MusicHub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicHub.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MusicHub/Pods-MusicHub.debug.xcconfig"; sourceTree = "<group>"; };
 		9C783E2ABD1E4F70794A5506 /* Pods-MusicHub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicHub.release.xcconfig"; path = "Pods/Target Support Files/Pods-MusicHub/Pods-MusicHub.release.xcconfig"; sourceTree = "<group>"; };
 		C51BA28A48A29DF94B795AEF /* libPods-MusicHub.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MusicHub.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E76DA0982067F8500077313D /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = data.json; path = "../../../Downloads/musichub ui/animation/data.json"; sourceTree = "<group>"; };
+		E76DA0A020680BAF0077313D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E76DA0A820680FAC0077313D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = MusicHub/Assets.xcassets; sourceTree = "<group>"; };
+		E76DA0AA2068107F0077313D /* icon-04_25x25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-04_25x25.png"; path = "../../../../Downloads/icon-04_25x25.png"; sourceTree = "<group>"; };
+		E76DA0AB2068107F0077313D /* icon-02_25x25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-02_25x25.png"; path = "../../../../Downloads/icon-02_25x25.png"; sourceTree = "<group>"; };
+		E76DA0AC2068107F0077313D /* icon-01_25x25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-01_25x25.png"; path = "../../../../Downloads/icon-01_25x25.png"; sourceTree = "<group>"; };
+		E76DA0AD2068107F0077313D /* icon-03_25x25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-03_25x25.png"; path = "../../../../Downloads/icon-03_25x25.png"; sourceTree = "<group>"; };
+		E76DA0AE2068107F0077313D /* icon-05_25x25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-05_25x25.png"; path = "../../../../Downloads/icon-05_25x25.png"; sourceTree = "<group>"; };
+		E76DA0AF2068107F0077313D /* icon-06_25x25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-06_25x25.png"; path = "../../../../Downloads/icon-06_25x25.png"; sourceTree = "<group>"; };
 		E7D756662067ED2C00AF7694 /* MusicHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7D756692067ED2C00AF7694 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E7D7566A2067ED2C00AF7694 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E7D7566C2067ED2C00AF7694 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E7D7566D2067ED2C00AF7694 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		E7D756702067ED2C00AF7694 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		E7D756722067ED2C00AF7694 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E7D756752067ED2C00AF7694 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E7D756772067ED2C00AF7694 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7D756782067ED2C00AF7694 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -65,15 +76,31 @@
 		08749252268E8F48008FB42D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				E76DA0A820680FAC0077313D /* Assets.xcassets */,
 				623319649A3533554172868F /* Pods-MusicHub.debug.xcconfig */,
 				9C783E2ABD1E4F70794A5506 /* Pods-MusicHub.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		E76DA09A20680A510077313D /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				E76DA0AC2068107F0077313D /* icon-01_25x25.png */,
+				E76DA0AB2068107F0077313D /* icon-02_25x25.png */,
+				E76DA0AD2068107F0077313D /* icon-03_25x25.png */,
+				E76DA0AA2068107F0077313D /* icon-04_25x25.png */,
+				E76DA0AE2068107F0077313D /* icon-05_25x25.png */,
+				E76DA0AF2068107F0077313D /* icon-06_25x25.png */,
+			);
+			path = Icons;
+			sourceTree = "<group>";
+		};
 		E7D7565D2067ED2C00AF7694 = {
 			isa = PBXGroup;
 			children = (
+				E76DA09A20680A510077313D /* Icons */,
+				E76DA0982067F8500077313D /* data.json */,
 				E7D756682067ED2C00AF7694 /* MusicHub */,
 				E7D756672067ED2C00AF7694 /* Products */,
 				E7D756922067EF7200AF7694 /* Frameworks */,
@@ -97,11 +124,8 @@
 				E7D7567F2067EE0D00AF7694 /* NetworkController.h */,
 				E7D756802067EE0D00AF7694 /* NetworkController.m */,
 				E7D756822067EE7D00AF7694 /* Main UI classes */,
-				E7D7566C2067ED2C00AF7694 /* ViewController.h */,
-				E7D7566D2067ED2C00AF7694 /* ViewController.m */,
-				E7D7566F2067ED2C00AF7694 /* Main.storyboard */,
-				E7D756722067ED2C00AF7694 /* Assets.xcassets */,
 				E7D756742067ED2C00AF7694 /* LaunchScreen.storyboard */,
+				E76DA09F20680BAF0077313D /* Main.storyboard */,
 				E7D756772067ED2C00AF7694 /* Info.plist */,
 				E7D756782067ED2C00AF7694 /* main.m */,
 			);
@@ -193,9 +217,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E76DA0B42068107F0077313D /* icon-05_25x25.png in Resources */,
+				E76DA0B22068107F0077313D /* icon-01_25x25.png in Resources */,
 				E7D756762067ED2C00AF7694 /* LaunchScreen.storyboard in Resources */,
-				E7D756732067ED2C00AF7694 /* Assets.xcassets in Resources */,
-				E7D756712067ED2C00AF7694 /* Main.storyboard in Resources */,
+				E76DA0B12068107F0077313D /* icon-02_25x25.png in Resources */,
+				E76DA0B52068107F0077313D /* icon-06_25x25.png in Resources */,
+				E76DA0992067F8500077313D /* data.json in Resources */,
+				E76DA0B02068107F0077313D /* icon-04_25x25.png in Resources */,
+				E76DA0B32068107F0077313D /* icon-03_25x25.png in Resources */,
+				E76DA0A120680BAF0077313D /* Main.storyboard in Resources */,
+				E76DA0A920680FAC0077313D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,7 +293,6 @@
 			files = (
 				E7D7568B2067EEFC00AF7694 /* LibraryViewController.m in Sources */,
 				E7D756812067EE0D00AF7694 /* NetworkController.m in Sources */,
-				E7D7566E2067ED2C00AF7694 /* ViewController.m in Sources */,
 				E7D7568E2067EF1000AF7694 /* RecentlyListenedViewController.m in Sources */,
 				E7D756852067EE9C00AF7694 /* SpeechToTextViewController.m in Sources */,
 				E7D756792067ED2C00AF7694 /* main.m in Sources */,
@@ -274,10 +304,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		E7D7566F2067ED2C00AF7694 /* Main.storyboard */ = {
+		E76DA09F20680BAF0077313D /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				E7D756702067ED2C00AF7694 /* Base */,
+				E76DA0A020680BAF0077313D /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

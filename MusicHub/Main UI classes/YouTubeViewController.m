@@ -21,9 +21,6 @@
     
     self.videoView.delegate = self;
     
-    self.videoView.frame = CGRectMake(self.view.bounds.origin.x, self.view.bounds.origin.y + 50,
-                                      self.view.bounds.size.width, self.view.bounds.size.height - 50);
-    
     NSLog(@"Video link = %@", self.videoLink);
     NSString* id = [self extractYoutubeIdFromLink:self.videoLink];
     NSLog(@"ID = %@", id);
@@ -43,7 +40,6 @@
                                      };
         
         [self.videoView loadWithVideoId:id playerVars:playerVars];
-        
     }
 }
 

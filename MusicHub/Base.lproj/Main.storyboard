@@ -19,25 +19,33 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W7B-cS-UQo">
-                                <rect key="frame" x="100" y="168" width="153" height="203"/>
+                                <rect key="frame" x="111" y="566" width="153" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Speek"/>
                                 <connections>
                                     <action selector="recordButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ddL-kF-HWM"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Say it, i will sing it" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jFt-Gu-faQ">
+                                <rect key="frame" x="65" y="114" width="244" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.72022094664731751" green="0.16837586526300508" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Search" id="6L0-3i-hJI"/>
                     <connections>
+                        <outlet property="previewLabel" destination="jFt-Gu-faQ" id="Lfa-uN-IT4"/>
                         <outlet property="recordButton" destination="W7B-cS-UQo" id="6SR-VM-qtA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="760.79999999999995" y="5.8470764617691158"/>
+            <point key="canvasLocation" x="772" y="-17"/>
         </scene>
         <!--WIsh list-->
         <scene sceneID="kjB-kK-85n">
@@ -53,7 +61,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VMl-Gd-xVA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1518" y="99"/>
+            <point key="canvasLocation" x="1482" y="-7"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="lHT-gP-z8Y">
@@ -66,9 +74,9 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="K7T-cd-zAT" kind="relationship" relationship="viewControllers" id="L1y-6k-Ehf"/>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="mvd-cA-Tl1"/>
                         <segue destination="cHr-aY-lEe" kind="relationship" relationship="viewControllers" id="iSg-LY-zAS"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="mvd-cA-Tl1"/>
+                        <segue destination="K7T-cd-zAT" kind="relationship" relationship="viewControllers" id="L1y-6k-Ehf"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="is4-2T-trm" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -99,19 +107,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nej-5I-OXx" customClass="YTPlayerView">
-                                <rect key="frame" x="90" y="254" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cwL-D6-APF">
-                                <rect key="frame" x="272" y="44" width="54" height="30"/>
+                                <rect key="frame" x="183" y="544" width="54" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Dismiss"/>
                                 <connections>
                                     <action selector="dismissAction:" destination="jA0-cw-Vid" eventType="touchUpInside" id="0vC-cP-Doz"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nej-5I-OXx" customClass="YTPlayerView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="374"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="3ut-9T-QNh"/>
@@ -122,7 +130,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eBP-fd-0j8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1741" y="1051"/>
+            <point key="canvasLocation" x="1648.8" y="780.35982008995506"/>
         </scene>
     </scenes>
 </document>

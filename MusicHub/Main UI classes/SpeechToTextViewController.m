@@ -7,6 +7,7 @@
 //
 
 #import "SpeechToTextViewController.h"
+#import "Lottie/Lottie.h"
 
 #define SERVER_BAD_RESPONCE @"Not Available"
 
@@ -20,14 +21,16 @@
 @property (strong, nonatomic) NSString* lastSent;
 @property (strong, nonatomic) NSString* serverResponse;
 @property (assign, nonatomic) BOOL linkReceived;
-
+@property (strong, nonatomic) LOTAnimationView* musicNotesAnimation;
 @end
 
-@implementation SpeechToTextViewController
+@implementation SpeechToTextViewController 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.view.backgroundColor = [UIColor cyanColor];
+    [self createMusicNotesAnimation];
     self.recognizer = [[SFSpeechRecognizer alloc] initWithLocale:[NSLocale localeWithLocaleIdentifier:@"en-US"]];
     self.recognizer.delegate = self;
     self.recordButton.enabled = false;
@@ -60,6 +63,7 @@
         //self.textFromServer.text = message;
         self.serverResponse = message;
         
+        [self.musicNotesAnimation stop];
         
         
         //Send to server, if response is bad
@@ -115,6 +119,20 @@
     [self.audioEngine stop];
     [self.recognitionRequest endAudio];
     [self.recordButton setTitle:@"Start recording" forState:UIControlStateNormal];
+}
+
+#pragma mark - Utilities
+-(void) createMusicNotesAnimation {
+    LOTAnimationView* animation = [LOTAnimationView animationNamed:@"data"];
+    self.musicNotesAnimation = animation;
+    
+    animation.frame = CGRectMake(0, 0, 400, 400);
+    animation.center = self.view.center;
+    animation.contentMode = UIViewContentModeScaleAspectFit;
+    animation.loopAnimation = YES;
+    animation.animationSpeed = 1.2;
+    animation.autoReverseAnimation = YES;
+    [self.view addSubview:animation];
 }
 
 - (NSString *)extractYoutubeIdFromLink:(NSString *)link {
@@ -263,16 +281,22 @@
     
     if(self.audioEngine.isRunning) {
         [self.audioEngine stop];
+        [self.musicNotesAnimation stop];
         [self.recognitionRequest endAudio];
         self.recordButton.enabled = NO;
+        self.view.backgroundColor = [UIColor cyanColor];
         [self.recordButton setTitle:@"Start recording" forState:UIControlStateNormal];
         NSLog(@"if branch");
+        self.previewLabel.text =  @"Say it, i will sing it";
     } else {
         NSLog(@"else branch");
+        [ self.musicNotesAnimation play];
         // Reset flag for sending after youtube playing
         self.linkReceived = YES;
+        self.view.backgroundColor = [UIColor whiteColor];
         [self.recordButton setTitle:@"Stop recording" forState:UIControlStateNormal];
         [self startRecording];
+        self.previewLabel.text = @"Identifying ...";
     }
 }
 
