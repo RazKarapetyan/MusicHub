@@ -17,7 +17,7 @@
 @property (strong, nonatomic) SFSpeechAudioBufferRecognitionRequest* recognitionRequest;
 @property (strong, nonatomic) SFSpeechRecognitionTask* recognitionTask;
 @property (strong, nonatomic) AVAudioEngine* audioEngine;
-@property (strong, nonatomic) NSString* recognizedString;
+@property (strong, atomic)    NSString* recognizedString;
 @property (strong, nonatomic) NSString* lastSent;
 @property (strong, nonatomic) NSString* serverResponse;
 @property (assign, nonatomic) BOOL linkReceived;
@@ -233,7 +233,13 @@
             /*  Flag for sending data to server again, after youtube playing */
             if(self.linkReceived) {
                 NSLog(@"Sending from recording");
-                [[NetworkController sharedInstance] sendMessage:self.recognizedString];
+                
+                
+                dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+                    [[NetworkController sharedInstance] sendMessage:self.recognizedString];
+                });
+                
+                
                 self.lastSent = self.recognizedString;
                 self.linkReceived = NO;
             }
