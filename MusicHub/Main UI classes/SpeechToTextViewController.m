@@ -22,14 +22,14 @@
 @property (strong, nonatomic) NSString* serverResponse;
 @property (assign, nonatomic) BOOL linkReceived;
 @property (strong, nonatomic) LOTAnimationView* musicNotesAnimation;
+@property (strong, nonatomic) UITapGestureRecognizer *tapGestureRecognizer;
 @end
 
-@implementation SpeechToTextViewController 
+@implementation SpeechToTextViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor cyanColor];
     [self createMusicNotesAnimation];
     self.recognizer = [[SFSpeechRecognizer alloc] initWithLocale:[NSLocale localeWithLocaleIdentifier:@"en-US"]];
     self.recognizer.delegate = self;
@@ -37,6 +37,14 @@
     self.recognizedString = @"";
     self.serverResponse = @"";
     
+    UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(recordPressed:)];
+    self.tapGestureRecognizer = tapGestureRecognizer;
+    
+    self.tapGestureRecognizer.delegate = self;
+
+    [self.musicNotesAnimation addGestureRecognizer:tapGestureRecognizer];
+    
+
     /* Get authorization from user */
     [self authorizeSpeechRecognization];
     
@@ -63,9 +71,6 @@
         //self.textFromServer.text = message;
         self.serverResponse = message;
         
-        [self.musicNotesAnimation stop];
-        
-        
         //Send to server, if response is bad
         if ([message isEqualToString:SERVER_BAD_RESPONCE] ) {
             //            NSLog(@"BEFORE SLEEPING\n");
@@ -80,7 +85,9 @@
                 self.lastSent = self.recognizedString;
                 [[NetworkController sharedInstance] sendMessage:self.recognizedString];
             } else {
-                
+                [self.musicNotesAnimation stop];
+                self.previewLabel.text =  @"Say it, i will sing it";
+
                 NSLog(@" RAZ going to show alert");
                 
                 UIAlertController * alert=[UIAlertController alertControllerWithTitle:@"Server warning"
@@ -108,6 +115,8 @@
         
         // Present playing controller only for valid video IDs
         if ([self extractYoutubeIdFromLink:videoview.videoLink]) {
+            [self.musicNotesAnimation stop];
+            self.previewLabel.text =  @"Say it, i will sing it";
             [self stopRecordingDuringGoodServerRespond];
             [self presentViewController:videoview animated:YES completion:nil];
             
@@ -281,26 +290,23 @@
 }
 
 #pragma mark - Actions
-- (IBAction)recordButtonPressed:(UIButton*)sender {
+- (IBAction)recordPressed:(UITapGestureRecognizer*)sender {
     
     [[NetworkController sharedInstance] connect];
     
     if(self.audioEngine.isRunning) {
         [self.audioEngine stop];
         [self.musicNotesAnimation stop];
+        self.previewLabel.text =  @"Say it, i will sing it";
         [self.recognitionRequest endAudio];
         self.recordButton.enabled = NO;
-        self.view.backgroundColor = [UIColor cyanColor];
-        [self.recordButton setTitle:@"Start recording" forState:UIControlStateNormal];
         NSLog(@"if branch");
-        self.previewLabel.text =  @"Say it, i will sing it";
     } else {
         NSLog(@"else branch");
         [ self.musicNotesAnimation play];
         // Reset flag for sending after youtube playing
         self.linkReceived = YES;
         self.view.backgroundColor = [UIColor whiteColor];
-        [self.recordButton setTitle:@"Stop recording" forState:UIControlStateNormal];
         [self startRecording];
         self.previewLabel.text = @"Identifying ...";
     }

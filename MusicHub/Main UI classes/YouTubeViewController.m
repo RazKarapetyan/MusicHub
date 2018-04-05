@@ -11,9 +11,24 @@
 
 @interface YouTubeViewController ()
 
+@property (weak, nonatomic) IBOutlet UIButton *playButton;
 @end
 
 @implementation YouTubeViewController
+
+#pragma mark - UI actions
+- (IBAction)playButtonClicked:(UIButton*)sender {
+    
+    static bool pressed = false;
+    if (pressed) {
+        [sender setImage:[UIImage imageNamed:@"icon-12.png"] forState:UIControlStateNormal];
+        pressed = false;
+    } else {
+        [sender setImage:[UIImage imageNamed:@"icon-11.png"] forState:UIControlStateNormal];
+        pressed = true;
+    }
+
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

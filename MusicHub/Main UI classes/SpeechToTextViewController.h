@@ -11,12 +11,10 @@
 #import "NetworkController.h"
 #import "YouTubeViewController.h"
 
-@interface SpeechToTextViewController : UIViewController <SFSpeechRecognizerDelegate>
+@interface SpeechToTextViewController : UIViewController <SFSpeechRecognizerDelegate , UIGestureRecognizerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIButton *recordButton;
 @property (weak, nonatomic) IBOutlet UILabel *previewLabel;
-
-- (IBAction)recordButtonPressed:(id)sender;
 
 @end
 
