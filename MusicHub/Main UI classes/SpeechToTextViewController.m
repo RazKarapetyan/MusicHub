@@ -30,6 +30,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    //register to FaeSongsViewController  for notification
+    [[NSNotificationCenter defaultCenter]
+     addObserver:[self.tabBarController.childViewControllers objectAtIndex:0]
+     selector:@selector(eventHandler:)
+     name:@"FavoriteWasChoosen"
+     object:nil];
+    
     [self createMusicNotesAnimation];
     self.recognizer = [[SFSpeechRecognizer alloc] initWithLocale:[NSLocale localeWithLocaleIdentifier:@"en-US"]];
     self.recognizer.delegate = self;

@@ -113,6 +113,16 @@
             self.alertLabel.hidden = finished;
         }];
         
+        
+        NSDictionary *dict = @{@"songTitle": self.songTitleLabel.text,
+                               @"artistName": self.artistNameLabel.text,
+                               };
+
+        [[NSNotificationCenter defaultCenter]
+         postNotificationName:@"FavoriteWasChoosen"
+         object:nil
+         userInfo:dict];
+        
     } else {
         [sender setImage:[UIImage imageNamed:@"icon-01_25x25.png"] forState:UIControlStateSelected];
         [sender setSelected:YES];

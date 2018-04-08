@@ -19,6 +19,14 @@
     // Do any additional setup after loading the view.
 }
 
+-(void)eventHandler:(NSNotification*) notification
+{
+    NSDictionary* dict = notification.userInfo;
+    
+    NSLog(@"Song title is  %@", [dict valueForKey:@"songTitle"]);
+    NSLog(@"Artisr name is  %@", [dict valueForKey:@"artistName"]);
+    
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
