@@ -33,7 +33,7 @@
 		E7D756812067EE0D00AF7694 /* NetworkController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D756802067EE0D00AF7694 /* NetworkController.m */; };
 		E7D756852067EE9C00AF7694 /* SpeechToTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D756842067EE9C00AF7694 /* SpeechToTextViewController.m */; };
 		E7D7568B2067EEFC00AF7694 /* LibraryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D7568A2067EEFC00AF7694 /* LibraryViewController.m */; };
-		E7D7568E2067EF1000AF7694 /* RecentlyListenedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D7568D2067EF1000AF7694 /* RecentlyListenedViewController.m */; };
+		E7D7568E2067EF1000AF7694 /* FavoriteSongsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D7568D2067EF1000AF7694 /* FavoriteSongsViewController.m */; };
 		E7D756912067EF3200AF7694 /* YouTubeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D756902067EF3200AF7694 /* YouTubeViewController.m */; };
 		E7D756942067EF7300AF7694 /* Speech.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7D756932067EF7300AF7694 /* Speech.framework */; };
 /* End PBXBuildFile section */
@@ -73,8 +73,8 @@
 		E7D756842067EE9C00AF7694 /* SpeechToTextViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpeechToTextViewController.m; sourceTree = "<group>"; };
 		E7D756892067EEFC00AF7694 /* LibraryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LibraryViewController.h; sourceTree = "<group>"; };
 		E7D7568A2067EEFC00AF7694 /* LibraryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LibraryViewController.m; sourceTree = "<group>"; };
-		E7D7568C2067EF1000AF7694 /* RecentlyListenedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecentlyListenedViewController.h; sourceTree = "<group>"; };
-		E7D7568D2067EF1000AF7694 /* RecentlyListenedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecentlyListenedViewController.m; sourceTree = "<group>"; };
+		E7D7568C2067EF1000AF7694 /* FavoriteSongsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FavoriteSongsViewController.h; sourceTree = "<group>"; };
+		E7D7568D2067EF1000AF7694 /* FavoriteSongsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FavoriteSongsViewController.m; sourceTree = "<group>"; };
 		E7D7568F2067EF3200AF7694 /* YouTubeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YouTubeViewController.h; sourceTree = "<group>"; };
 		E7D756902067EF3200AF7694 /* YouTubeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YouTubeViewController.m; sourceTree = "<group>"; };
 		E7D756932067EF7300AF7694 /* Speech.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Speech.framework; path = System/Library/Frameworks/Speech.framework; sourceTree = SDKROOT; };
@@ -171,8 +171,8 @@
 				E7D756842067EE9C00AF7694 /* SpeechToTextViewController.m */,
 				E7D756892067EEFC00AF7694 /* LibraryViewController.h */,
 				E7D7568A2067EEFC00AF7694 /* LibraryViewController.m */,
-				E7D7568C2067EF1000AF7694 /* RecentlyListenedViewController.h */,
-				E7D7568D2067EF1000AF7694 /* RecentlyListenedViewController.m */,
+				E7D7568C2067EF1000AF7694 /* FavoriteSongsViewController.h */,
+				E7D7568D2067EF1000AF7694 /* FavoriteSongsViewController.m */,
 			);
 			path = "Main UI classes";
 			sourceTree = "<group>";
@@ -333,7 +333,7 @@
 			files = (
 				E7D7568B2067EEFC00AF7694 /* LibraryViewController.m in Sources */,
 				E7D756812067EE0D00AF7694 /* NetworkController.m in Sources */,
-				E7D7568E2067EF1000AF7694 /* RecentlyListenedViewController.m in Sources */,
+				E7D7568E2067EF1000AF7694 /* FavoriteSongsViewController.m in Sources */,
 				E7D756852067EE9C00AF7694 /* SpeechToTextViewController.m in Sources */,
 				E7D756792067ED2C00AF7694 /* main.m in Sources */,
 				E7D756912067EF3200AF7694 /* YouTubeViewController.m in Sources */,

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RecentlyListenedViewController : UIViewController
+@interface FavoriteSongsViewController : UIViewController
 
 @end

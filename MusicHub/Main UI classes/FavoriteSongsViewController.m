@@ -6,13 +6,13 @@
 //  Copyright © 2018 Razmik Karapetyan. All rights reserved.
 //
 
-#import "RecentlyListenedViewController.h"
+#import "FavoriteSongsViewController.h"
 
-@interface RecentlyListenedViewController ()
+@interface FavoriteSongsViewController ()
 
 @end
 
-@implementation RecentlyListenedViewController
+@implementation FavoriteSongsViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

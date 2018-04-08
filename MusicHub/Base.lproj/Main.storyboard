@@ -49,7 +49,7 @@
         <!--WIsh list-->
         <scene sceneID="kjB-kK-85n">
             <objects>
-                <viewController id="cHr-aY-lEe" customClass="RecentlyListenedViewController" sceneMemberID="viewController">
+                <viewController id="cHr-aY-lEe" customClass="FavoriteSongsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eVH-Jv-5ZF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -155,7 +155,9 @@
                     </view>
                     <connections>
                         <outlet property="alertLabel" destination="SdB-83-LyW" id="1lr-3e-FBy"/>
+                        <outlet property="artistNameLabel" destination="1HX-Fs-hUM" id="ba6-Tp-NN7"/>
                         <outlet property="favoriteButton" destination="aFC-cD-Ylf" id="yD4-CW-1vR"/>
+                        <outlet property="songTitleLabel" destination="kBF-KX-BVa" id="Nmg-0J-QUZ"/>
                         <outlet property="videoView" destination="Nej-5I-OXx" id="DlF-A6-hmQ"/>
                     </connections>
                 </viewController>

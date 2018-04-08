@@ -20,5 +20,7 @@
 - (IBAction)dismissAction:(UIButton*)sender;
 @property (weak, nonatomic) IBOutlet UIButton *_Nullable favoriteButton;
 @property (weak, nonatomic) IBOutlet UILabel *alertLabel;
+@property (weak, nonatomic) IBOutlet UILabel *songTitleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *artistNameLabel;
 
 @end
