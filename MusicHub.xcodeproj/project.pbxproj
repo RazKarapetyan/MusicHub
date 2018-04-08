@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		25A4B3A73F923CE4B85A8319 /* libPods-MusicHub.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C51BA28A48A29DF94B795AEF /* libPods-MusicHub.a */; };
-		E76DA0992067F8500077313D /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = E76DA0982067F8500077313D /* data.json */; };
 		E76DA0A120680BAF0077313D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E76DA09F20680BAF0077313D /* Main.storyboard */; };
 		E76DA0A920680FAC0077313D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E76DA0A820680FAC0077313D /* Assets.xcassets */; };
+		E794D799207A539300531ECE /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = E794D798207A539300531ECE /* data.json */; };
 		E798786E206AF2D3003EDD20 /* icon-04_25x25.png in Resources */ = {isa = PBXBuildFile; fileRef = E7987868206AF2D2003EDD20 /* icon-04_25x25.png */; };
 		E798786F206AF2D3003EDD20 /* icon-02_25x25.png in Resources */ = {isa = PBXBuildFile; fileRef = E7987869206AF2D2003EDD20 /* icon-02_25x25.png */; };
 		E7987870206AF2D3003EDD20 /* icon-01_25x25.png in Resources */ = {isa = PBXBuildFile; fileRef = E798786A206AF2D2003EDD20 /* icon-01_25x25.png */; };
@@ -42,9 +42,9 @@
 		623319649A3533554172868F /* Pods-MusicHub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicHub.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MusicHub/Pods-MusicHub.debug.xcconfig"; sourceTree = "<group>"; };
 		9C783E2ABD1E4F70794A5506 /* Pods-MusicHub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicHub.release.xcconfig"; path = "Pods/Target Support Files/Pods-MusicHub/Pods-MusicHub.release.xcconfig"; sourceTree = "<group>"; };
 		C51BA28A48A29DF94B795AEF /* libPods-MusicHub.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MusicHub.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E76DA0982067F8500077313D /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = data.json; path = "../../../Downloads/musichub ui/animation/data.json"; sourceTree = "<group>"; };
 		E76DA0A020680BAF0077313D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E76DA0A820680FAC0077313D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = MusicHub/Assets.xcassets; sourceTree = "<group>"; };
+		E794D798207A539300531ECE /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		E7987868206AF2D2003EDD20 /* icon-04_25x25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-04_25x25.png"; sourceTree = "<group>"; };
 		E7987869206AF2D2003EDD20 /* icon-02_25x25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-02_25x25.png"; sourceTree = "<group>"; };
 		E798786A206AF2D2003EDD20 /* icon-01_25x25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-01_25x25.png"; sourceTree = "<group>"; };
@@ -106,6 +106,7 @@
 		E76DA09A20680A510077313D /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				E794D798207A539300531ECE /* data.json */,
 				E79878882076AE18003EDD20 /* 9349HomeButton.png */,
 				E798786A206AF2D2003EDD20 /* icon-01_25x25.png */,
 				E7987869206AF2D2003EDD20 /* icon-02_25x25.png */,
@@ -130,7 +131,6 @@
 			isa = PBXGroup;
 			children = (
 				E76DA09A20680A510077313D /* Icons */,
-				E76DA0982067F8500077313D /* data.json */,
 				E7D756682067ED2C00AF7694 /* MusicHub */,
 				E7D756672067ED2C00AF7694 /* Products */,
 				E7D756922067EF7200AF7694 /* Frameworks */,
@@ -250,6 +250,7 @@
 				E7987872206AF2D3003EDD20 /* icon-05_25x25.png in Resources */,
 				E7987870206AF2D3003EDD20 /* icon-01_25x25.png in Resources */,
 				E7D756762067ED2C00AF7694 /* LaunchScreen.storyboard in Resources */,
+				E794D799207A539300531ECE /* data.json in Resources */,
 				E7987886206AF3A2003EDD20 /* icon-10.png in Resources */,
 				E7987880206AF3A2003EDD20 /* icon-09.png in Resources */,
 				E7987887206AF3A2003EDD20 /* icon-14.png in Resources */,
@@ -260,7 +261,6 @@
 				E7987882206AF3A2003EDD20 /* icon-11.png in Resources */,
 				E7987884206AF3A2003EDD20 /* icon-12.png in Resources */,
 				E798786E206AF2D3003EDD20 /* icon-04_25x25.png in Resources */,
-				E76DA0992067F8500077313D /* data.json in Resources */,
 				E7987883206AF3A2003EDD20 /* icon-07.png in Resources */,
 				E79878892076AE18003EDD20 /* 9349HomeButton.png in Resources */,
 				E798786F206AF2D3003EDD20 /* icon-02_25x25.png in Resources */,
