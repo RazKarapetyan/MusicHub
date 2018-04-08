@@ -33,7 +33,7 @@
     [self createMusicNotesAnimation];
     self.recognizer = [[SFSpeechRecognizer alloc] initWithLocale:[NSLocale localeWithLocaleIdentifier:@"en-US"]];
     self.recognizer.delegate = self;
-    self.recordButton.enabled = false;
+    //self.recordButton.enabled = false;
     self.recognizedString = @"";
     self.serverResponse = @"";
     
@@ -127,7 +127,7 @@
 -(void) stopRecordingDuringGoodServerRespond {
     [self.audioEngine stop];
     [self.recognitionRequest endAudio];
-    [self.recordButton setTitle:@"Start recording" forState:UIControlStateNormal];
+   // [self.recordButton setTitle:@"Start recording" forState:UIControlStateNormal];
 }
 
 #pragma mark - Utilities
@@ -204,7 +204,7 @@
         }
         
         [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-            self.recordButton.enabled = buttonIsEnabled;
+           // self.recordButton.enabled = buttonIsEnabled;
         }];
         
     }];
@@ -263,7 +263,7 @@
             [inputNode removeTapOnBus:(0)];
             self.recognitionRequest = nil;
             self.recognitionTask = nil;
-            self.recordButton.enabled = true;
+            //self.recordButton.enabled = true;
         }
     }];;
     
@@ -299,7 +299,7 @@
         [self.musicNotesAnimation stop];
         self.previewLabel.text =  @"Say it, i will sing it";
         [self.recognitionRequest endAudio];
-        self.recordButton.enabled = NO;
+        //self.recordButton.enabled = NO;
         NSLog(@"if branch");
     } else {
         NSLog(@"else branch");
@@ -316,10 +316,17 @@
 - (void)speechRecognizer:(SFSpeechRecognizer *)speechRecognizer availabilityDidChange:(BOOL)available {
     NSLog(@"speechRecognizer availabilityDidChange");
     if (available) {
-        self.recordButton.enabled = YES;
+       // self.recordButton.enabled = YES;
     } else {
-        self.recordButton.enabled = NO;
+        //self.recordButton.enabled = NO;
     }
 }
+- (IBAction)presentbuttonPressed:(id)sender {
+     YouTubeViewController* videoview = [self.storyboard instantiateViewControllerWithIdentifier:@"raz"];
+    [self presentViewController:videoview animated:YES completion:nil];
 
+}
+
+- (IBAction)favoriteButtonPressed:(id)sender {
+}
 @end

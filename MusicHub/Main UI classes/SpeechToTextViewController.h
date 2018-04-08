@@ -13,7 +13,7 @@
 
 @interface SpeechToTextViewController : UIViewController <SFSpeechRecognizerDelegate , UIGestureRecognizerDelegate>
 
-@property (weak, nonatomic) IBOutlet UIButton *recordButton;
+- (IBAction)favoriteButtonPressed:(id)sender;
 @property (weak, nonatomic) IBOutlet UILabel *previewLabel;
 
 @end

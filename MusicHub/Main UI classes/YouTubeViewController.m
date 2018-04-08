@@ -10,37 +10,43 @@
 #import <Speech/Speech.h>
 
 @interface YouTubeViewController ()
-
-@property (weak, nonatomic) IBOutlet UIButton *playButton;
 @end
 
 @implementation YouTubeViewController
 
 #pragma mark - UI actions
-- (IBAction)playButtonClicked:(UIButton*)sender {
-    
-    static bool pressed = false;
-    if (pressed) {
-        [sender setImage:[UIImage imageNamed:@"icon-12.png"] forState:UIControlStateNormal];
-        pressed = false;
-    } else {
-        [sender setImage:[UIImage imageNamed:@"icon-11.png"] forState:UIControlStateNormal];
-        pressed = true;
-    }
-
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    [self.favoriteButton setSelected:YES];
+    [self.favoriteButton setImage:[UIImage imageNamed:@"icon-01_25x25.png"] forState:UIControlStateNormal];
+    
     self.videoView.delegate = self;
-    
-    NSLog(@"Video link = %@", self.videoLink);
-    NSString* id = [self extractYoutubeIdFromLink:self.videoLink];
-    NSLog(@"ID = %@", id);
-    
+    NSString* id;
+    if (self.videoLink) {
+        NSLog(@"Video link = %@", self.videoLink);
+        id = [self extractYoutubeIdFromLink:self.videoLink];
+        NSLog(@"ID = %@", id);
+    }
     if (id != nil) {
+        /* Set audio session to PLAYBACK, for being able play audio in youtube player */
+        AVAudioSession* audioSession = [AVAudioSession sharedInstance];
+        [audioSession setCategory:AVAudioSessionCategoryPlayback  error:nil];
+
+        NSDictionary *playerVars = @{
+                                     @"playsinline" : @1,
+                                     @"autoplay" : @1,
+                                     @"rel" : @0,
+                                     @"showinfo" : @0,
+                                     //@"allowsInlineMediaPlayback" : @1,
+                                     @"origin" : @"http://www.youtube.com",
+                                     };
+
+        [self.videoView loadWithVideoId:id playerVars:playerVars];
+    } else {
+        id = @"6CvuyaKmLnw";
         /* Set audio session to PLAYBACK, for being able play audio in youtube player */
         AVAudioSession* audioSession = [AVAudioSession sharedInstance];
         [audioSession setCategory:AVAudioSessionCategoryPlayback  error:nil];
@@ -88,6 +94,40 @@
     [self.videoView playVideo];
     [self.videoView seekToSeconds:self.seekToSec allowSeekAhead:YES];
     NSLog(@"delegate method");
+}
+
+- (IBAction)favoriteButtonPressed:(UIButton*)sender {
+   
+    self.alertLabel.alpha = 1;
+    self.alertLabel.hidden = NO;
+   
+    if ([sender isSelected]) {
+        [sender setImage:[UIImage imageNamed:@"icon-02_25x25.png"] forState:UIControlStateNormal];
+        [sender setSelected:NO];
+        
+        [UIView animateWithDuration:3 animations:^{
+            self.alertLabel.alpha = 0;
+            [self.alertLabel setText:@"Added to favorites"];
+
+        } completion: ^(BOOL finished) {
+            self.alertLabel.hidden = finished;
+        }];
+        
+    } else {
+        [sender setImage:[UIImage imageNamed:@"icon-01_25x25.png"] forState:UIControlStateSelected];
+        [sender setSelected:YES];
+        
+        [UIView animateWithDuration:3 animations:^{
+            self.alertLabel.alpha = 0;
+            [self.alertLabel setText:@"Removed from favorites"];
+            
+        } completion: ^(BOOL finished) {
+            self.alertLabel.hidden = finished;
+        }];
+        
+        NSLog(@"Is not selected branch");
+    }
+    
 }
 @end
 

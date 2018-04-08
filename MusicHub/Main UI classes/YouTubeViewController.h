@@ -17,6 +17,8 @@
 @property (strong, nonnull) NSString* videoLink;
 @property (assign) float seekToSec;
 
-- (IBAction)dismissAction:(id)sender;
+- (IBAction)dismissAction:(UIButton*)sender;
+@property (weak, nonatomic) IBOutlet UIButton *_Nullable favoriteButton;
+@property (weak, nonatomic) IBOutlet UILabel *alertLabel;
 
 @end
