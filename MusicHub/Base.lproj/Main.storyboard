@@ -141,17 +141,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cwL-D6-APF">
-                                <rect key="frame" x="142" y="520" width="90" height="62"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Dismiss" image="9349HomeButton.png"/>
-                                <connections>
-                                    <action selector="dismissAction:" destination="jA0-cw-Vid" eventType="touchUpInside" id="0vC-cP-Doz"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="3ut-9T-QNh"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="55x-cf-YqP" appends="YES" id="2VH-EJ-usL"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="alertLabel" destination="SdB-83-LyW" id="1lr-3e-FBy"/>
@@ -163,11 +159,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eBP-fd-0j8" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="gxq-aP-RMZ" userLabel="Exit" sceneMemberID="exit"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="55x-cf-YqP">
+                    <connections>
+                        <action selector="panGestureAction:" destination="jA0-cw-Vid" id="HB5-T2-ti6"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1480.8" y="694.90254872563719"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="9349HomeButton.png" width="2084" height="1580"/>
-    </resources>
 </document>

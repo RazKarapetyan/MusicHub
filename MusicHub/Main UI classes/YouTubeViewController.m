@@ -10,6 +10,10 @@
 #import <Speech/Speech.h>
 
 @interface YouTubeViewController ()
+
+@property (assign, nonatomic) CGPoint originalPosition;
+@property (assign, nonatomic) CGPoint currentTouchedPosition;
+
 @end
 
 @implementation YouTubeViewController
@@ -67,10 +71,6 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (IBAction)dismissAction:(UIButton *)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark - Utilit methods
@@ -138,6 +138,38 @@
         NSLog(@"Is not selected branch");
     }
     
+}
+
+- (IBAction)panGestureAction:(UIPanGestureRecognizer*)sender {
+    NSLog(@"pan gesture");
+    CGPoint translation =  [sender translationInView:self.view];
+    
+    if([sender state] == UIGestureRecognizerStateBegan) {
+        self.originalPosition = self.view.center;
+        self.currentTouchedPosition = [sender locationInView:self.view];
+    } else if ([sender state] == UIGestureRecognizerStateChanged) {
+        CGRect frame = self.view.frame;
+        frame.origin = CGPointMake(translation.x, translation.y);
+        self.view.frame = frame;
+    } else if([sender state] == UIGestureRecognizerStateEnded) {
+        
+       CGPoint velocity =  [sender velocityInView:self.view];
+        if(velocity.y >= 1500) {
+            [UIView animateWithDuration:0.2 animations:^{
+                CGRect frame = self.view.frame;
+                frame.origin = CGPointMake(self.view.frame.origin.x, self.view.frame.size.height);
+                self.view.frame = frame;
+            } completion:^(BOOL finished) {
+                if (finished)
+                    [self dismissViewControllerAnimated:true completion:nil];
+            }];
+        }
+        else  {
+            [UIView animateWithDuration:0.2 animations:^{
+                self.view.center =  self.originalPosition;
+            }];
+        }
+    }
 }
 @end
 

@@ -25,7 +25,6 @@
     
     NSLog(@"Song title is  %@", [dict valueForKey:@"songTitle"]);
     NSLog(@"Artisr name is  %@", [dict valueForKey:@"artistName"]);
-    
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

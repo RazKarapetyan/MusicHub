@@ -18,9 +18,9 @@
 @property (strong, nonatomic) SFSpeechRecognitionTask* recognitionTask;
 @property (strong, nonatomic) AVAudioEngine* audioEngine;
 @property (strong, atomic)    NSString* recognizedString;
-@property (strong, nonatomic) NSString* lastSent;
+@property (strong, atomic) NSString* lastSent;
 @property (strong, nonatomic) NSString* serverResponse;
-@property (assign, nonatomic) BOOL linkReceived;
+@property (assign, atomic) BOOL linkReceived;
 @property (strong, nonatomic) LOTAnimationView* musicNotesAnimation;
 @property (strong, nonatomic) UITapGestureRecognizer *tapGestureRecognizer;
 @end
@@ -253,11 +253,12 @@
                 
                 dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
                     [[NetworkController sharedInstance] sendMessage:self.recognizedString];
+                    
+                    self.lastSent = self.recognizedString;
+                    self.linkReceived = NO;
                 });
                 
-                
-                self.lastSent = self.recognizedString;
-                self.linkReceived = NO;
+               
             }
             
             
