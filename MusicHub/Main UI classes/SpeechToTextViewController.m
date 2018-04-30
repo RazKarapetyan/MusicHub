@@ -30,7 +30,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    //register to FaeSongsViewController  for notification
+    //register to FavoriteSongsViewController  for notification
     [[NSNotificationCenter defaultCenter]
      addObserver:[self.tabBarController.childViewControllers objectAtIndex:0]
      selector:@selector(eventHandler:)
@@ -314,7 +314,7 @@
         [ self.musicNotesAnimation play];
         // Reset flag for sending after youtube playing
         self.linkReceived = YES;
-        self.view.backgroundColor = [UIColor whiteColor];
+        self.view.backgroundColor = [UIColor blackColor];
         [self startRecording];
         self.previewLabel.text = @"Identifying ...";
     }

@@ -20,7 +20,10 @@
     
     UITabBarController* tvc =(UITabBarController*)self.window.rootViewController;
     NSArray* items = [tvc.tabBar items];
-    [tvc.tabBar setBackgroundColor:[UIColor whiteColor]];
+    //[tvc.tabBar setBarTintColor:[UIColor blackColor]];
+    [tvc.tabBar setBarStyle:(UIBarStyleBlack)];
+    [tvc.tabBar setUnselectedItemTintColor:[UIColor cyanColor]];
+    [tvc.tabBar setBackgroundColor:[UIColor blackColor]];
     [[items objectAtIndex:0] setImage:[ UIImage imageNamed:@"icon-01_25x25.png"]] ;
     [[items objectAtIndex:1] setImage:[ UIImage imageNamed:@"icon-05_25x25.png"]] ;
     [[items objectAtIndex:2] setImage:[ UIImage imageNamed:@"icon-03_25x25.png"]] ;
