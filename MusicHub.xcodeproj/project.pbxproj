@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		25A4B3A73F923CE4B85A8319 /* libPods-MusicHub.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C51BA28A48A29DF94B795AEF /* libPods-MusicHub.a */; };
+		E73BBB4A20AB119500DD277B /* data1.json in Resources */ = {isa = PBXBuildFile; fileRef = E73BBB4920AB119500DD277B /* data1.json */; };
 		E76DA0A120680BAF0077313D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E76DA09F20680BAF0077313D /* Main.storyboard */; };
 		E76DA0A920680FAC0077313D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E76DA0A820680FAC0077313D /* Assets.xcassets */; };
 		E794D799207A539300531ECE /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = E794D798207A539300531ECE /* data.json */; };
@@ -42,6 +43,7 @@
 		623319649A3533554172868F /* Pods-MusicHub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicHub.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MusicHub/Pods-MusicHub.debug.xcconfig"; sourceTree = "<group>"; };
 		9C783E2ABD1E4F70794A5506 /* Pods-MusicHub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicHub.release.xcconfig"; path = "Pods/Target Support Files/Pods-MusicHub/Pods-MusicHub.release.xcconfig"; sourceTree = "<group>"; };
 		C51BA28A48A29DF94B795AEF /* libPods-MusicHub.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MusicHub.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E73BBB4920AB119500DD277B /* data1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data1.json; sourceTree = "<group>"; };
 		E76DA0A020680BAF0077313D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E76DA0A820680FAC0077313D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = MusicHub/Assets.xcassets; sourceTree = "<group>"; };
 		E794D798207A539300531ECE /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				E794D798207A539300531ECE /* data.json */,
+				E73BBB4920AB119500DD277B /* data1.json */,
 				E79878882076AE18003EDD20 /* 9349HomeButton.png */,
 				E798786A206AF2D2003EDD20 /* icon-01_25x25.png */,
 				E7987869206AF2D2003EDD20 /* icon-02_25x25.png */,
@@ -267,6 +270,7 @@
 				E76DA0A120680BAF0077313D /* Main.storyboard in Resources */,
 				E76DA0A920680FAC0077313D /* Assets.xcassets in Resources */,
 				E7987885206AF3A2003EDD20 /* icon-16.png in Resources */,
+				E73BBB4A20AB119500DD277B /* data1.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

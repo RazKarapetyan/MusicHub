@@ -23,7 +23,10 @@
 @property (assign, atomic) BOOL linkReceived;
 @property (strong, nonatomic) LOTAnimationView* musicNotesAnimation;
 @property (strong, nonatomic) UITapGestureRecognizer *tapGestureRecognizer;
+@property (assign, nonatomic) BOOL successfullyConnected;
 @end
+
+ #define max(a,b) ((a) > (b) ? (a) : (b))
 
 @implementation SpeechToTextViewController
 
@@ -36,6 +39,8 @@
      selector:@selector(eventHandler:)
      name:@"FavoriteWasChoosen"
      object:nil];
+    
+    self.successfullyConnected = false;
     
     [self createMusicNotesAnimation];
     self.recognizer = [[SFSpeechRecognizer alloc] initWithLocale:[NSLocale localeWithLocaleIdentifier:@"en-US"]];
@@ -60,6 +65,7 @@
     // Enable input and show keyboard as soon as connection is established.
     [NetworkController sharedInstance].connectionOpenedBlock = ^(NetworkController* connection){
         NSLog(@">>> Connection opened <<<");
+        self.successfullyConnected = true;
     };
     
     // Disable input and hide keyboard when connection is closed.
@@ -139,7 +145,7 @@
 
 #pragma mark - Utilities
 -(void) createMusicNotesAnimation {
-    LOTAnimationView* animation = [LOTAnimationView animationNamed:@"data"];
+    LOTAnimationView* animation = [LOTAnimationView animationNamed:@"data1"];
     self.musicNotesAnimation = animation;
     
     animation.frame = CGRectMake(0, 0, 400, 400);
@@ -300,15 +306,32 @@
 #pragma mark - Actions
 - (IBAction)recordPressed:(UITapGestureRecognizer*)sender {
     
+ 
     [[NetworkController sharedInstance] connect];
     
+    // If not connected to server, just animate, otherwise run audioengine
+    if(!self.successfullyConnected) {
+        static int tapped = 1;
+        tapped++;
+        
+        if (tapped & 1) {
+            [self.musicNotesAnimation stop];
+            self.previewLabel.text =  @"Say it, i will sing it";
+        }
+        else {
+            [self.musicNotesAnimation play];
+            self.previewLabel.text = @"Identifying ...";
+            
+        }
+    } else {
     if(self.audioEngine.isRunning) {
         [self.audioEngine stop];
         [self.musicNotesAnimation stop];
-        self.previewLabel.text =  @"Say it, i will sing it";
         [self.recognitionRequest endAudio];
         //self.recordButton.enabled = NO;
         NSLog(@"if branch");
+        [self.musicNotesAnimation stop];
+        self.previewLabel.text =  @"Say it, i will sing it";
     } else {
         NSLog(@"else branch");
         [ self.musicNotesAnimation play];
@@ -317,6 +340,8 @@
         self.view.backgroundColor = [UIColor blackColor];
         [self startRecording];
         self.previewLabel.text = @"Identifying ...";
+        [self.musicNotesAnimation play];
+    }
     }
 }
 
